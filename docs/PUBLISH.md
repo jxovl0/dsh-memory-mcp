@@ -10,7 +10,7 @@ git init
 git add -A
 git commit -m "feat: dsh-memory-mcp 0.3.0 — markdown 记忆 + 自动注入 + 本地向量检索"
 git branch -M main
-git remote add origin https://github.com/<你的账号>/dsh-memory-mcp.git
+git remote add origin https://github.com/jxovl0/dsh-memory-mcp.git
 git push -u origin main
 git tag v0.3.0 && git push --tags
 ```
@@ -45,9 +45,9 @@ dsh plugin --profile desktop add dsh-memory-mcp
 {
   "name": "dsh-memory-mcp",
   "title": { "en": "Markdown Memory", "zh": "Markdown 长期记忆" },
-  "author": "<你的 GitHub 名>",
-  "repository": { "url": "https://github.com/<账号>/dsh-memory-mcp" },
-  "homepage": "https://github.com/<账号>/dsh-memory-mcp#readme",
+  "author": "jxovl0",
+  "repository": { "url": "https://github.com/jxovl0/dsh-memory-mcp" },
+  "homepage": "https://github.com/jxovl0/dsh-memory-mcp#readme",
   "metadata": {
     "category": "integrations",
     "keywords": ["dsh-plugin", "deepseek-harness", "memory", "markdown", "mcp"],
