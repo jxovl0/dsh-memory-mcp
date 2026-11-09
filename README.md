@@ -1,5 +1,7 @@
 # dsh-memory-mcp
 
+[English](README.en.md) | 中文
+
 **DeepSeek Harness 的长期记忆插件，但记忆是你自己能看见的 markdown 文件。**
 
 一条命令安装、每轮自动注入相关记忆、可选本地中文向量检索。数据不锁在数据库里——每个记忆就是 `cards/*.md`，可以直接读、改、备份、进 git。
