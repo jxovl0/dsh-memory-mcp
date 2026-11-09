@@ -1,0 +1,8 @@
+node_modules/
+.hf-cache/
+*.db
+*.db-journal
+cards/
+archive/
+.DS_Store
+*.log

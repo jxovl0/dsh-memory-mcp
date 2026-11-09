@@ -1,0 +1,66 @@
+{
+    "name":  "dsh-memory-mcp",
+    "version":  "0.3.3",
+    "description":  "DSH 长期记忆插件：markdown 卡片（可读可改）+ SQLite FTS5 + 可选本地中文向量；每轮相关注入 + 设置页管理，一条命令安装",
+    "keywords":  [
+                     "dsh",
+                     "dsh-plugin",
+                     "deepseek-harness",
+                     "memory",
+                     "mcp",
+                     "sqlite",
+                     "embeddings"
+                 ],
+    "type":  "module",
+    "main":  "lib/index.js",
+    "exports":  {
+                    ".":  "./lib/index.js",
+                    "./client":  "./lib/client.js",
+                    "./cli":  "./bin/cli.mjs",
+                    "./mcp":  "./mcp-server.mjs",
+                    "./cordis.patch.yml":  "./cordis.patch.yml",
+                    "./package.json":  "./package.json",
+                    "./icon.svg":  "./icon.svg"
+                },
+    "bin":  {
+                "dsh-memory":  "bin/cli.mjs"
+            },
+    "files":  [
+                  "lib",
+                  "bin",
+                  "mcp-server.mjs",
+                  "cordis.patch.yml",
+                  "docs/screenshots",
+                  "icon.svg",
+                  "README.md",
+                  "LICENSE"
+              ],
+    "license":  "MIT",
+    "engines":  {
+                    "node":  "^22.19.0 || \u003e=24.0.0"
+                },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web",
+                               "inject":  [
+                                              "@deepseek-ai/dsh-client-runtime",
+                                              "@deepseek-ai/dsh-client-ui-slots",
+                                              "@deepseek-ai/dsh-client-ui-settings",
+                                              "@deepseek-ai/dsh-client-connection"
+                                          ]
+                           }
+            },
+    "peerDependencies":  {
+                             "@deepseek-ai/cordis":  "^4.0.5",
+                             "@deepseek-ai/dsh-llm":  "^0.2.1-rc.2",
+                             "@deepseek-ai/dsh-system-prompt":  "^0.2.1-rc.2",
+                             "@deepseek-ai/dsh-tools":  "^0.2.1-rc.2"
+                         },
+    "dependencies":  {
+                         "@deepseek-ai/dsh-typert-protocol":  "0.2.1-rc.2",
+                         "@deepseek-ai/schemastery":  "^3.18.5"
+                     }
+}

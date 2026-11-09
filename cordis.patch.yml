@@ -1,0 +1,27 @@
+# dsh-memory-mcp 的 bundle patch：给 profile 插入一条记忆插件行。
+#
+# 记忆目录用 dshHomePath 解析，保证同一台机器上所有 profile 共享一份记忆。
+# 卡片（markdown）就在这个目录下的 cards/，可以直接看、改、备份。
+
+- insert:
+    - id: memory-cards
+      name: dsh-memory-mcp
+      config:
+        path: !!js dshHomePath('memory-cards')
+        # 常驻注入：置顶 + 最近 N 条（保持很小，避免每轮臃肿）
+        promptRecentCount: 4
+        promptMaxChars: 900
+        # 每轮相关注入：要求字面重合或高置信语义
+        injectEnabled: true
+        injectCount: 3
+        injectMinScore: 0.30
+        injectSemanticMinScore: 0.45
+        injectRelRatio: 0.85
+        injectMinQueryChars: 4
+        injectMaxChars: 800
+        # 其他
+        maxTextChars: 2000
+        searchLimitDefault: 8
+        searchLimitMax: 30
+        rejectSecrets: true
+        promptOrder: 50
