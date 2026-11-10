@@ -1,6 +1,6 @@
 {
     "name":  "dsh-memory-mcp",
-    "version":  "0.4.0",
+    "version":  "0.5.0",
     "description":  "DSH 长期记忆插件：markdown 卡片（可读可改）+ SQLite FTS5 + 可选本地中文向量；每轮相关注入 + 设置页管理，一条命令安装",
     "keywords":  [
                      "dsh",
